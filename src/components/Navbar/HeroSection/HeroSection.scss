@@ -1,0 +1,40 @@
+@import '../../../assets/styles/variables.scss';
+
+section {
+    height: calc(100% - 82px);
+    .content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+        h2 {
+            max-width: 720px;
+            font-size: 32px;
+            span {
+                color: $color;
+            }
+        }
+        p {
+            color: lighten($color: $gray, $amount: 40);
+            font-weight: 500;
+            max-width: 770px;
+        }
+        a {
+            background: $color;
+            border-radius: 4px;
+            height: 42px;
+            width: 192px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            cursor: pointer;
+            &:hover {
+                background: darken($color: $color, $amount: 5);
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@import '../../assets/styles/variables.scss';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 82px;
+    background: $black;
+    padding: 0 48px;
+    header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        img {
+            height: 52px;
+            width: 52px;
+        }
+        h1 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    ul {
+        display: flex;
+        gap: 8px;
+        li {
+            a {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-weight: 500;
+                font-size: 15px;
+                border-radius: 4px;
+                cursor: pointer;
+                height: 30px;
+                padding: 0 12px;
+                &:hover {
+                    background: transparentize($color: $white, $amount: .875);
+                }
+            }
+        }
+    }
+}

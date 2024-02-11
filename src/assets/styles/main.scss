@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: $font;
+    color: $white;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    transition: .2s linear;
+}
+
+html, body, #root {
+    background: $dark;
+    height: 100%;
+}
+section {
+    padding: 16px;
+}
