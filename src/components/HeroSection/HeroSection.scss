@@ -1,0 +1,41 @@
+@import '../../assets/styles/variables.scss';
+
+section#hero {
+    height: calc(100% - 82px);
+    .content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+        h2 {
+            font-size: 24px;
+            span {
+                color: $color;
+            }
+        }
+        p {
+            color: lighten($color: $gray, $amount: 40);
+            letter-spacing: .5px;
+            font-weight: 500;
+            max-width: 770px;
+            font-size: 12px;
+        }
+        a {
+            background: $color;
+            border-radius: 4px;
+            height: 42px;
+            width: 192px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            cursor: pointer;
+            &:hover {
+                background: darken($color: $color, $amount: 5);
+            }
+        }
+    }
+}

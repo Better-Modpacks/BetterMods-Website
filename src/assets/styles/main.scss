@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 * {
     margin: 0;
@@ -11,13 +11,42 @@
     list-style: none;
     border: none;
     outline: none;
-    transition: .2s linear;
+    transition: 0.2s linear;
 }
 
-html, body, #root {
+html,
+body,
+#root {
     background: $dark;
     height: 100%;
 }
 section {
     padding: 16px;
+    .section-heading {
+        h3 {
+            color: lighten($color: $gray, $amount: 40);
+            font-weight: 600;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: $dark;
+}
+
+::-webkit-scrollbar-track {
+    background: $dark;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $color;
+    border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken($color: $color, $amount: 5);
+}
+::selection {
+    background: darken($color: $color, $amount: 10);
 }

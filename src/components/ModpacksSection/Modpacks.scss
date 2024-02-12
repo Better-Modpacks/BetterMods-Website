@@ -1,0 +1,52 @@
+@import '../../assets/styles/variables.scss';
+
+.modpacks {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    .modpack {
+        width: 32%;
+        height: 256px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            .dark-effect {
+                background: transparentize($color: $black, $amount: .7);
+                backdrop-filter: blur(0px);
+            }
+        }
+        .dark-effect {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            background: transparentize($color: $black, $amount: .6);
+            backdrop-filter: blur(3px);
+        }
+        span {
+            color: $white;
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 1px;
+            z-index: 1;
+        }
+    }
+    @media screen and (max-width: 1100px) {
+        flex-wrap: wrap;
+        .modpack {
+            width: 48%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        .modpack {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../assets/styles/variables.scss';
+
+section#modpacks {
+    height: fit-content;
+    .content {
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            h4 {
+                font-size: 24px;
+            }
+        }
+    }
+}

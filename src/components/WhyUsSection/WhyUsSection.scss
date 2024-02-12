@@ -1,0 +1,65 @@
+@import '../../assets/styles/variables.scss';
+
+section#whyus {
+    height: fit-content;
+    .content {
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            h4 {
+                font-size: 24px;
+            }
+        } 
+        .boxes {
+            margin-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            .box {
+                background: lighten($color: $dark, $amount: 5);
+                height: 256px;
+                flex: 0 1 32%;
+                border-radius: 4px;
+                padding: 32px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                    background: darken($color: $color, $amount: 5);
+                }
+                .icon {
+                    background: $color;
+                    min-height: 42px;
+                    min-width: 42px;
+                    border-radius: 4px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                span {
+                    font-weight: 500;
+                }
+                p {
+                    font-weight: 500;
+                }
+            }
+            @media screen and (max-width: 1100px) {
+                .box {
+                    flex: 0 1 49%;
+                }
+            }
+            @media screen and (max-width: 850px) {
+                .box {
+                    flex: 0 1 100%;
+                }
+            }
+        }
+    }
+}

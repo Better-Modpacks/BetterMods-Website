@@ -20,6 +20,13 @@ nav {
             font-weight: 600;
         }
     }
+    a#mobile-menu {
+        display: none;
+        height: 30px;
+        width: 30px;
+        justify-content: center;
+        align-items: center;
+    }
     ul {
         display: flex;
         gap: 8px;
@@ -36,6 +43,37 @@ nav {
                 padding: 0 12px;
                 &:hover {
                     background: transparentize($color: $white, $amount: .875);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        a#mobile-menu {
+            display: flex;
+        }
+        ul {
+            display: none;
+        }
+        &.active {
+            ul {
+                display: flex;
+                position: fixed;
+                gap: 16px;
+                top: 82px;
+                left: 0;
+                height: calc(100% - 82px);
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: darken($color: $dark, $amount: 2.5);
+                li {
+                    a {
+                        width: 225px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
                 }
             }
         }
