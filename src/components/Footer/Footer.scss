@@ -18,7 +18,7 @@ footer {
         font-weight: 600;
         font-size: 16px;
         span {
-            color: $color;
+            color: lighten($color: $color, $amount: 5);
         }
     }
 }

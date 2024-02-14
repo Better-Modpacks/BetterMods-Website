@@ -1,43 +1,11 @@
+import { useState } from 'react'
 import './Modpacks.scss'
+import modpacksAPI from '../../api/modpacks.json'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default function Modpacks({ limit }) {
-    const modpacks = [
-        {
-            name: 'Vanilla+',
-            version: '1.20.1',
-            loader: 'fabric',
-            url: 'https://github.com/Better-Modpacks/Vanilla-Plus/releases/download/v1.0/Vanilla+.zip',
-            background: 'https://wallpapers.com/images/hd/720p-minecraft-background-vm7wpn1tlci2k9o6.jpg'
-        },
-        {
-            name: 'Vanilla+',
-            version: '1.20.1',
-            loader: 'fabric',
-            url: 'https://github.com/Better-Modpacks/Vanilla-Plus/releases/download/v1.0/Vanilla+.zip',
-            background: 'https://wallpapers.com/images/hd/720p-minecraft-background-vm7wpn1tlci2k9o6.jpg'
-        },
-        {
-            name: 'Vanilla+',
-            version: '1.20.1',
-            loader: 'fabric',
-            url: 'https://github.com/Better-Modpacks/Vanilla-Plus/releases/download/v1.0/Vanilla+.zip',
-            background: 'https://wallpapers.com/images/hd/720p-minecraft-background-vm7wpn1tlci2k9o6.jpg'
-        },
-        {
-            name: 'Vanilla+',
-            version: '1.20.1',
-            loader: 'fabric',
-            url: 'https://github.com/Better-Modpacks/Vanilla-Plus/releases/download/v1.0/Vanilla+.zip',
-            background: 'https://wallpapers.com/images/hd/720p-minecraft-background-vm7wpn1tlci2k9o6.jpg'
-        },
-        {
-            name: 'Vanilla+',
-            version: '1.20.1',
-            loader: 'fabric',
-            url: 'https://github.com/Better-Modpacks/Vanilla-Plus/releases/download/v1.0/Vanilla+.zip',
-            background: 'https://wallpapers.com/images/hd/720p-minecraft-background-vm7wpn1tlci2k9o6.jpg'
-        }
-    ]
+    const [modpacks] = useState(modpacksAPI)
 
     function handleOpenLink(link) {
         window.open(link, '_blank')
@@ -52,6 +20,7 @@ export default function Modpacks({ limit }) {
                 <div className="modpack" style={styles} onClick={() => handleOpenLink(modpack.url)}>
                     <div className="dark-effect"></div>
                     <span>{modpack.name}</span>
+                    <div className="github"><FontAwesomeIcon icon={faGithub} /></div>
                 </div>
             </>
         )

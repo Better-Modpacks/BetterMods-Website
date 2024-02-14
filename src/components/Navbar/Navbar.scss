@@ -7,6 +7,8 @@ nav {
     height: 82px;
     background: $black;
     padding: 0 48px;
+    position: relative;
+    z-index: 999;
     header {
         display: flex;
         align-items: center;
