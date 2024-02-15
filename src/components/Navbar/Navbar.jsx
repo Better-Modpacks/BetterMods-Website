@@ -15,7 +15,7 @@ export default function Navbar() {
 
   function NavbarMediaIcon() {
     return (
-      <a onClick={() => handleMobileMenu()} id='mobile-menu' href="#"><FontAwesomeIcon icon={faBars} /></a>
+      <a aria-label='mobile-menu' onClick={() => handleMobileMenu()} id='mobile-menu' href="#"><FontAwesomeIcon icon={faBars} /></a>
     )
   }
 

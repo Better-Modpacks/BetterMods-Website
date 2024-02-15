@@ -1,0 +1,15 @@
+{
+    "short_name": "Better Modpacks",
+    "name": "Better Modpacks website for minecraft",
+    "icons": [
+      {
+        "src": "./logo.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#f3f3f3",
+    "background_color": "#0c1116"
+}
